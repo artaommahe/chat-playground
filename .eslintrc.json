@@ -30,6 +30,11 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
+    },
+    {
+      "files": ["*.stories.*"],
+      "extends": ["plugin:@nrwl/nx/typescript", "plugin:storybook/recommended"],
+      "rules": {}
     }
   ]
 }
