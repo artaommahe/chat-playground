@@ -23,8 +23,20 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "plugins": ["react-hooks", "functional", "eslint-plugin-unicorn"],
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "plugin:react-hooks/recommended"
+      ],
+      "rules": {
+        "functional/immutable-data": [
+          "error",
+          {
+            "ignorePattern": ["module.exports"]
+          }
+        ],
+        "unicorn/filename-case": "error"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
