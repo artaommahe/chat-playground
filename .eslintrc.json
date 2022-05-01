@@ -32,7 +32,7 @@
         "functional/immutable-data": [
           "error",
           {
-            "ignorePattern": ["module.exports"]
+            "ignorePattern": ["module.exports", "*.args"]
           }
         ],
         "unicorn/filename-case": "error"
