@@ -1,15 +1,16 @@
+import { styled } from '@mui/material';
 import { memo } from 'react';
-import styled from 'styled-components';
 import { useTwitchChat } from './core/twitch-chat';
 import { Messages } from './messages/messages';
+import { ChatThemeProvider } from './theme';
 
 export interface ChatProps {
   channel?: string;
 }
 
-const StyledChatMessage = styled.div`
-  color: pink;
-`;
+const StyledChat = styled('div')({
+  //
+});
 
 const DEFAULT_CHANNEL = 'lestream';
 
@@ -17,8 +18,10 @@ export const Chat = memo(({ channel }: ChatProps) => {
   const { messages } = useTwitchChat({ channel: channel || DEFAULT_CHANNEL });
 
   return (
-    <StyledChatMessage>
-      <Messages messages={messages} />
-    </StyledChatMessage>
+    <ChatThemeProvider>
+      <StyledChat>
+        <Messages messages={messages} />
+      </StyledChat>
+    </ChatThemeProvider>
   );
 });

@@ -1,14 +1,8 @@
-import styled from 'styled-components';
-
 import { Route, Routes, Link } from 'react-router-dom';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
 
 export function App() {
   return (
-    <StyledApp>
+    <>
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
@@ -45,7 +39,7 @@ export function App() {
         />
       </Routes>
       {/* END: routes */}
-    </StyledApp>
+    </>
   );
 }
 

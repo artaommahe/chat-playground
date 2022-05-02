@@ -16,7 +16,7 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
 
     client.connect();
 
-    client.on('message', (channel, tags, message) => {
+    client.on('message', (_channel, tags, message) => {
       const chatMessage: ChatMessage = {
         id: tags.id,
         from: {

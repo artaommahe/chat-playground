@@ -1,15 +1,16 @@
 import { memo } from 'react';
-import styled from 'styled-components';
 import { Message } from '../message/message';
 import { ChatMessage } from '../chat.interfaces';
+import { styled } from '@mui/material';
 
 export interface MessagesProps {
   messages: ChatMessage[];
 }
 
-const StyledMessages = styled.div`
-  color: pink;
-`;
+const StyledMessages = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+});
 
 export const Messages = memo(({ messages }: MessagesProps) => {
   return (
