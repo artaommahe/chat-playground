@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ChatMessage } from './chat-message';
+import { Message } from './message';
 
 export default {
   title: 'Message',
-  component: ChatMessage,
-} as ComponentMeta<typeof ChatMessage>;
+  component: Message,
+} as ComponentMeta<typeof Message>;
 
-const Template: ComponentStory<typeof ChatMessage> = (args) => (
-  <ChatMessage {...args} />
+const Template: ComponentStory<typeof Message> = (args) => (
+  <Message {...args} />
 );
 
 export const Primary = Template.bind({});
