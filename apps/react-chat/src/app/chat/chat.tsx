@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import { memo } from 'react';
 import { useTwitchChat } from './core/twitch-chat';
-import { Messages } from './messages/messages';
+import { MessagesList } from './messages-list/messages-list';
 import { ChatThemeProvider } from './theme';
 
 export interface ChatProps {
@@ -20,7 +20,7 @@ export const Chat = memo(({ channel }: ChatProps) => {
   return (
     <ChatThemeProvider>
       <StyledChat>
-        <Messages messages={messages} />
+        <MessagesList messages={messages} />
       </StyledChat>
     </ChatThemeProvider>
   );

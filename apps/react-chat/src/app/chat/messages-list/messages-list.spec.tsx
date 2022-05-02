@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import { Messages } from './messages';
+import { MessagesList } from './messages-list';
 
 describe('ChatMessages', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Messages messages={[]} />);
+    const { baseElement } = render(<MessagesList messages={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });
