@@ -4966,6 +4966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/tmi.js@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "@types/tmi.js@npm:1.8.1"
+  checksum: 3411ba9cb00f1b221f8e5cf3839c0b13193f75e512e034fb3d9558cebf2d7cfc4707e10385d7fa96ef18d370195e282f8ceaa6f998014ef7c2b68f83aa7c3ae7
+  languageName: node
+  linkType: hard
+
 "@types/uglify-js@npm:*":
   version: 3.13.2
   resolution: "@types/uglify-js@npm:3.13.2"
@@ -7463,6 +7470,7 @@ __metadata:
     "@types/react-is": 17.0.3
     "@types/react-router-dom": 5.3.3
     "@types/styled-components": 5.1.25
+    "@types/tmi.js": ^1.8.1
     "@typescript-eslint/eslint-plugin": ~5.18.0
     "@typescript-eslint/parser": ~5.18.0
     babel-jest: 27.5.1
@@ -7492,6 +7500,7 @@ __metadata:
     react-test-renderer: 18.0.0
     regenerator-runtime: ^0.13.7
     styled-components: ^5.3.5
+    tmi.js: ^1.8.5
     ts-jest: 27.1.4
     ts-node: 9.1.1
     tslib: ^2.3.0
@@ -14713,7 +14722,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.7":
   version: 2.6.7
   resolution: "node-fetch@npm:2.6.7"
   dependencies:
@@ -19196,6 +19205,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tmi.js@npm:^1.8.5":
+  version: 1.8.5
+  resolution: "tmi.js@npm:1.8.5"
+  dependencies:
+    node-fetch: ^2.6.1
+    ws: ^8.2.0
+  checksum: a48a05d9f2c5ac27a6d14ef243e787e6693bce8a3891c65da26d359c12d311b46518b36f98fe8139d0f96b74c0d773e039a5ea2763e9aaeace4eed63f91c2c86
+  languageName: node
+  linkType: hard
+
 "tmp@npm:~0.2.1":
   version: 0.2.1
   resolution: "tmp@npm:0.2.1"
@@ -20723,9 +20742,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.2.3, ws@npm:^8.4.2":
-  version: 8.5.0
-  resolution: "ws@npm:8.5.0"
+"ws@npm:^8.2.0, ws@npm:^8.2.3, ws@npm:^8.4.2":
+  version: 8.6.0
+  resolution: "ws@npm:8.6.0"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -20734,7 +20753,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 76f2f90e40344bf18fd544194e7067812fb1372b2a37865678d8f12afe4b478ff2ebc0c7c0aff82cd5e6b66fc43d889eec0f1865c2365d8f7a66d92da7744a77
+  checksum: e2fca82059f1e087d0c78e2f37135e1b8332bc804fce46f83c2db1cb8571685abf9d2c99b964bab3752536ad90b99b46fb8d1428899aed3e560684ab4641bffd
   languageName: node
   linkType: hard
 
