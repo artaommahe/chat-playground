@@ -12,15 +12,18 @@ const StyledMessage = styled('div')(({ theme }) => ({
   fontSize: theme.typography.fontSize,
 }));
 
-const StyledMessageFrom = styled('div')(({ theme }) => ({
+const StyledMessageFrom = styled('div')(({ theme, color }) => ({
   display: 'inline-block',
-  color: theme.palette.secondary.main,
+  color: color ?? theme.palette.secondary.main,
 }));
 
 export const Message = memo(({ message }: MessageProps) => {
   return (
     <StyledMessage>
-      <StyledMessageFrom>{message.from.name}:</StyledMessageFrom> {message.text}
+      <StyledMessageFrom color={message.from.color}>
+        {message.from.name}:
+      </StyledMessageFrom>{' '}
+      {message.text}
     </StyledMessage>
   );
 });

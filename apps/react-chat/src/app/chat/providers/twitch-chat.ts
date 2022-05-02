@@ -22,6 +22,7 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
         from: {
           id: tags['user-id'],
           name: tags.username ?? '(unknown)',
+          color: tags.color,
         },
         text: message,
       };

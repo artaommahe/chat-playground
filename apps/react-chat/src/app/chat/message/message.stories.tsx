@@ -15,5 +15,9 @@ const Template: ComponentStory<typeof Message> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  message: { id: 'a1', from: { name: 'test user' }, text: 'test message' },
+  message: {
+    id: 'a1',
+    from: { name: 'test user', color: '' },
+    text: 'test message',
+  },
 };

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Message } from './message';
 
-describe('ChatMessage', () => {
+describe('Message', () => {
   const message = {
     id: 'a1',
     from: { name: 'test user' },
