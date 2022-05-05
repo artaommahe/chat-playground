@@ -17,9 +17,7 @@ const StyledMessageFrom = styled('div')(({ theme, color }) => ({
   color: color ?? theme.palette.secondary.main,
 }));
 
-const StyledMessageText = styled('div')(() => ({
-  display: 'inline-block',
-}));
+const StyledMessageText = styled('span')(() => ({}));
 
 export const Message = memo(({ message }: MessageProps) => {
   return (
