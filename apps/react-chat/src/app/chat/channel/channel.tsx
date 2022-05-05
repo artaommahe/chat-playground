@@ -15,7 +15,7 @@ const StyledChannel = styled('div')(({ theme }) => ({
 export const Channel = memo(({ channel }: ChannelProps) => {
   return (
     <StyledChannel>
-      <Typography>{channel}</Typography>
+      <Typography data-testid="channel-name">{channel}</Typography>
     </StyledChannel>
   );
 });

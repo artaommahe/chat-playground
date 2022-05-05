@@ -13,7 +13,7 @@ const StyledChannelLoader = styled('div')(() => ({
 
 export const ChannelLoader = memo((_props: ChannelLoaderProps) => {
   return (
-    <StyledChannelLoader>
+    <StyledChannelLoader data-testid="channel-loader">
       <CircularProgress />
     </StyledChannelLoader>
   );

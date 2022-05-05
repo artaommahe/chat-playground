@@ -17,13 +17,19 @@ const StyledMessageFrom = styled('div')(({ theme, color }) => ({
   color: color ?? theme.palette.secondary.main,
 }));
 
+const StyledMessageText = styled('div')(() => ({
+  display: 'inline-block',
+}));
+
 export const Message = memo(({ message }: MessageProps) => {
   return (
-    <StyledMessage>
-      <StyledMessageFrom color={message.from.color}>
+    <StyledMessage data-testid="message">
+      <StyledMessageFrom color={message.from.color} data-testid="message-from">
         {message.from.name}:
       </StyledMessageFrom>{' '}
-      {message.text}
+      <StyledMessageText data-testid="message-text">
+        {message.text}
+      </StyledMessageText>
     </StyledMessage>
   );
 });
