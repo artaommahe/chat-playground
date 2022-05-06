@@ -4,9 +4,9 @@ import {
   triggerListener,
 } from './tmi-js-mock';
 import { act, renderHook } from '@testing-library/react';
-import { useTwitchChat } from './twitch-chat';
+import { useTwitchChat } from './use-twitch-chat';
 
-describe('chat/providers twitch', () => {
+describe('chat/core/providers twitch', () => {
   const channel = 'test-channel';
 
   beforeEach(() => {

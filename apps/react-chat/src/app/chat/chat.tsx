@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { useTwitchChat } from './providers/twitch-chat';
+import { useTwitchChat } from './core/providers/twitch/use-twitch-chat';
 import { ChatView } from './chat-view/chat-view';
 
 export interface ChatProps {

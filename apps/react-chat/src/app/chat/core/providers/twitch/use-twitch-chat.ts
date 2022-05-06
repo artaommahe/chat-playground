@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import tmi from 'tmi.js';
-import { ChatMessage } from '../chat.interfaces';
+import { ChatMessage } from '../../../chat.interfaces';
 
 export interface TwitchChatConfig {
   channel: string;
