@@ -33,6 +33,7 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
           color: tags.color,
         },
         text: message,
+        blocks: [],
       };
 
       setMessages((messages) => [...messages, chatMessage]);

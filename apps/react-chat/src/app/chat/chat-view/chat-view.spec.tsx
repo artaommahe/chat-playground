@@ -1,11 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import { ChatView } from './chat-view';
 
-describe('ChatView', () => {
+describe('chat view', () => {
   const channel = 'somechannel';
   const messages = [
-    { id: 'a1', from: { name: 'test user 1' }, text: 'test message 1' },
-    { id: 'a2', from: { name: 'test user 2' }, text: 'test message 2' },
+    {
+      id: 'a1',
+      from: { name: 'test user 1' },
+      text: 'test message 1',
+      blocks: [],
+    },
+    {
+      id: 'a2',
+      from: { name: 'test user 2' },
+      text: 'test message 2',
+      blocks: [],
+    },
   ];
 
   test('should render successfully', () => {

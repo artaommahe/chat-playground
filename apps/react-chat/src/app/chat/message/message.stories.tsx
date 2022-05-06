@@ -19,5 +19,6 @@ Primary.args = {
     id: 'a1',
     from: { name: 'test user', color: '' },
     text: 'test message',
+    blocks: [],
   },
 };
