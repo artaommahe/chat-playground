@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { ChatMessage } from '../chat.interfaces';
 import { ChatView } from './chat-view';
 
 describe('chat view', () => {
@@ -8,14 +9,14 @@ describe('chat view', () => {
       id: 'a1',
       from: { name: 'test user 1' },
       text: 'test message 1',
-      blocks: [],
-    },
+      blocks: [{ type: 'text', text: 'test message 1' }],
+    } as ChatMessage,
     {
       id: 'a2',
       from: { name: 'test user 2' },
       text: 'test message 2',
-      blocks: [],
-    },
+      blocks: [{ type: 'text', text: 'test message 2' }],
+    } as ChatMessage,
   ];
 
   test('should render successfully', () => {
@@ -69,7 +70,7 @@ describe('chat view', () => {
       expect(screen.getByTestId('message-from').textContent).toEqual(
         'test user 1:'
       );
-      expect(screen.getByTestId('message-text').textContent).toEqual(
+      expect(screen.getByTestId('message-text-block').textContent).toEqual(
         'test message 1'
       );
     });

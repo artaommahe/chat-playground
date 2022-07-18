@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import tmi from 'tmi.js';
 import { ChatMessage } from '../../../chat.interfaces';
+import { formatMessageTextToBlocks } from '../../message-blocks/message-blocks';
 
 export interface TwitchChatConfig {
   channel: string;
@@ -33,7 +34,7 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
           color: tags.color,
         },
         text: message,
-        blocks: [],
+        blocks: formatMessageTextToBlocks(message),
       };
 
       setMessages((messages) => [...messages, chatMessage]);

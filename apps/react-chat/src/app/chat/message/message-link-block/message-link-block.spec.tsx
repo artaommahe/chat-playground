@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ChatMessageLinkBlock } from '../../chat.interfaces';
+import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
 import { MessageLinkBlock } from './message-link-block';
 
 describe('chat/message/blocks link', () => {
@@ -19,6 +19,7 @@ describe('chat/message/blocks link', () => {
     const linkElement =
       screen.getByTestId<HTMLAnchorElement>('message-link-block');
 
+    expect(linkElement.tagName).toEqual('A');
     expect(linkElement.textContent).toEqual(block.url);
     expect(linkElement.href).toEqual(block.url);
     expect(linkElement.title).toEqual(block.url);

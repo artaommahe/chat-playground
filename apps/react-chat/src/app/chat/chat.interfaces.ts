@@ -1,14 +1,4 @@
-export interface ChatMessageTextBlock {
-  type: 'text';
-  text: string;
-}
-
-export interface ChatMessageLinkBlock {
-  type: 'link';
-  url: string;
-}
-
-export type ChatMessageBlock = ChatMessageTextBlock | ChatMessageLinkBlock;
+import { ChatMessageBlock } from './core/message-blocks/message-blocks.interfaces';
 
 export interface ChatMessage {
   id?: string;

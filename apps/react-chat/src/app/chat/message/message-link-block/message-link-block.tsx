@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
 import { memo, useEffect, useState } from 'react';
-import { ChatMessageLinkBlock } from '../../chat.interfaces';
+import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
 
 export interface MessageProps {
   block: ChatMessageLinkBlock;

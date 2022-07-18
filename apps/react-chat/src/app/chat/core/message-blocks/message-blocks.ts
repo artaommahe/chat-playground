@@ -1,4 +1,4 @@
-import { ChatMessageBlock } from '../../chat.interfaces';
+import { ChatMessageBlock } from './message-blocks.interfaces';
 import { formatLinksBlocks } from './link-formatter';
 
 const FORMATTERS = [formatLinksBlocks];

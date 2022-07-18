@@ -144,6 +144,7 @@ describe('chat/core/providers twitch', () => {
             color: '#123456',
           },
           text: 'message text',
+          blocks: [{ type: 'text', text: 'message text' }],
         },
       ]);
 
@@ -168,6 +169,7 @@ describe('chat/core/providers twitch', () => {
             color: '#123456',
           },
           text: 'message text',
+          blocks: [{ type: 'text', text: 'message text' }],
         },
         {
           id: 'a-b-c-2',
@@ -177,6 +179,7 @@ describe('chat/core/providers twitch', () => {
             color: undefined,
           },
           text: 'other message text',
+          blocks: [{ type: 'text', text: 'other message text' }],
         },
       ]);
     });

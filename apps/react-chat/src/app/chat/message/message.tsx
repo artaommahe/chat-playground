@@ -1,6 +1,7 @@
 import { styled } from '@mui/material';
 import { memo } from 'react';
 import { ChatMessage } from '../chat.interfaces';
+import { MessageBlocks } from './message-blocks/message-blocks';
 
 export interface MessageProps {
   message: ChatMessage;
@@ -17,17 +18,13 @@ const StyledMessageFrom = styled('div')(({ theme, color }) => ({
   color: color ?? theme.palette.secondary.main,
 }));
 
-const StyledMessageText = styled('span')(() => ({}));
-
 export const Message = memo(({ message }: MessageProps) => {
   return (
     <StyledMessage data-testid="message">
       <StyledMessageFrom color={message.from.color} data-testid="message-from">
         {message.from.name}:
       </StyledMessageFrom>{' '}
-      <StyledMessageText data-testid="message-text">
-        {message.text}
-      </StyledMessageText>
+      <MessageBlocks blocks={message.blocks} />
     </StyledMessage>
   );
 });

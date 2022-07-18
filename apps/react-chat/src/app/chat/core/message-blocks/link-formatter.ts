@@ -2,7 +2,7 @@ import {
   ChatMessageBlock,
   ChatMessageLinkBlock,
   ChatMessageTextBlock,
-} from '../../chat.interfaces';
+} from './message-blocks.interfaces';
 import Autolinker from 'autolinker';
 
 const autolinker = new Autolinker({ email: false, phone: false });

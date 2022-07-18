@@ -18,7 +18,20 @@ Primary.args = {
   message: {
     id: 'a1',
     from: { name: 'test user', color: '' },
-    text: 'test message',
-    blocks: [],
+    text: 'test message with https://twitch.tv/ link',
+    blocks: [
+      {
+        type: 'text',
+        text: 'test message with ',
+      },
+      {
+        type: 'link',
+        url: 'https://twitch.tv/',
+      },
+      {
+        type: 'text',
+        text: ' link ',
+      },
+    ],
   },
 };
