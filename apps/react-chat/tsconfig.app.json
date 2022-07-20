@@ -10,6 +10,7 @@
   ],
   "exclude": [
     "jest.config.ts",
+    "**/__test__/*",
     "**/*.spec.ts",
     "**/*.test.ts",
     "**/*.spec.tsx",

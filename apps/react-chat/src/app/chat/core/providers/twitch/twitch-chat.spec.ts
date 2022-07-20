@@ -2,7 +2,7 @@ import {
   mockTmiJsConstructorCalls,
   mockTmiJsInstanceMock,
   triggerListener,
-} from './tmi-js-mock';
+} from './__test__/tmi-js-mock';
 import { act, renderHook } from '@testing-library/react';
 import { useTwitchChat } from './use-twitch-chat';
 
