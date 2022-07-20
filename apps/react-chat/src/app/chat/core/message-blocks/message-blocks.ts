@@ -1,9 +1,13 @@
-import { ChatMessageBlock } from './message-blocks.interfaces';
-import { formatLinksBlocks } from './link-formatter';
+import { DEFAULT_FORMATTERS } from './message-blocks.consts';
+import {
+  ChatMessageBlock,
+  ChatMessageFormatter,
+} from './message-blocks.interfaces';
 
-const FORMATTERS = [formatLinksBlocks];
-
-export function formatMessageTextToBlocks(text: string): ChatMessageBlock[] {
+export function formatMessageTextToBlocks(
+  text: string,
+  formatters: ChatMessageFormatter[] = DEFAULT_FORMATTERS
+): ChatMessageBlock[] {
   const initialBlocks: ChatMessageBlock[] = [
     {
       type: 'text',
@@ -11,7 +15,7 @@ export function formatMessageTextToBlocks(text: string): ChatMessageBlock[] {
     },
   ];
 
-  const blocks = FORMATTERS.reduce(
+  const blocks = formatters.reduce(
     (blocks, parser) => parser(blocks),
     initialBlocks
   );

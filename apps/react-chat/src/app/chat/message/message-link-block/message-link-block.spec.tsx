@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
+import { ChatMessageLinkBlock } from '../../core/message-blocks/link/link.interfaces';
 import { MessageLinkBlock } from './message-link-block';
 
 describe('chat/message/blocks link', () => {
