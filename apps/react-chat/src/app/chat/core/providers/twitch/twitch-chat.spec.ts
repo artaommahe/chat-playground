@@ -13,10 +13,6 @@ describe('chat/core/providers twitch', () => {
     jest.clearAllMocks();
   });
 
-  afterEach(() => {
-    //
-  });
-
   describe('base', () => {
     test('should init tmi.js lib with proper values', () => {
       renderHook(useTwitchChat, { initialProps: { channel } });
@@ -145,6 +141,15 @@ describe('chat/core/providers twitch', () => {
           },
           text: 'message text',
           blocks: [{ type: 'text', text: 'message text' }],
+          provider: 'twitch',
+          providerMeta: {
+            tags: {
+              id: 'a-b-c-1',
+              'user-id': '123',
+              username: 'UserName',
+              color: '#123456',
+            },
+          },
         },
       ]);
 
@@ -170,6 +175,15 @@ describe('chat/core/providers twitch', () => {
           },
           text: 'message text',
           blocks: [{ type: 'text', text: 'message text' }],
+          provider: 'twitch',
+          providerMeta: {
+            tags: {
+              id: 'a-b-c-1',
+              'user-id': '123',
+              username: 'UserName',
+              color: '#123456',
+            },
+          },
         },
         {
           id: 'a-b-c-2',
@@ -180,6 +194,13 @@ describe('chat/core/providers twitch', () => {
           },
           text: 'other message text',
           blocks: [{ type: 'text', text: 'other message text' }],
+          provider: 'twitch',
+          providerMeta: {
+            tags: {
+              id: 'a-b-c-2',
+              'user-id': '456',
+            },
+          },
         },
       ]);
     });

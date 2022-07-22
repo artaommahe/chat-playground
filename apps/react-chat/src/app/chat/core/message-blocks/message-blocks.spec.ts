@@ -5,9 +5,9 @@ describe('chat/core/message-blocks', () => {
   const messageText = 'some text here';
 
   test('should return only one text block without formatters', () => {
-    expect(formatMessageTextToBlocks(messageText, [])).toEqual([
-      { type: 'text', text: messageText },
-    ]);
+    expect(
+      formatMessageTextToBlocks({ text: messageText, formatters: [] })
+    ).toEqual([{ type: 'text', text: messageText }]);
   });
 
   test('should return only one text block without formatters', () => {
@@ -20,7 +20,12 @@ describe('chat/core/message-blocks', () => {
       { type: 'text', text: 'postfix' },
     ]);
 
-    expect(formatMessageTextToBlocks(messageText, [testFormatter])).toEqual([
+    expect(
+      formatMessageTextToBlocks({
+        text: messageText,
+        formatters: [testFormatter],
+      })
+    ).toEqual([
       { type: 'text', text: 'prefix' },
       { type: 'text', text: messageText },
       { type: 'text', text: 'postfix' },

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import tmi from 'tmi.js';
 import { ChatMessage } from '../../../chat.interfaces';
 import { formatMessageTextToBlocks } from '../../message-blocks/message-blocks';
+import { TWITCH_PROVIDER } from './twitch.consts';
 
 export interface TwitchChatConfig {
   channel: string;
@@ -26,6 +27,11 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
     });
 
     client.on('message', (_channel, tags, message) => {
+      const blocks = formatMessageTextToBlocks({
+        text: message,
+        meta: { tags },
+      });
+
       const chatMessage: ChatMessage = {
         id: tags.id,
         from: {
@@ -34,7 +40,9 @@ export function useTwitchChat({ channel }: TwitchChatConfig) {
           color: tags.color,
         },
         text: message,
-        blocks: formatMessageTextToBlocks(message),
+        blocks,
+        provider: TWITCH_PROVIDER,
+        providerMeta: { tags },
       };
 
       setMessages((messages) => [...messages, chatMessage]);

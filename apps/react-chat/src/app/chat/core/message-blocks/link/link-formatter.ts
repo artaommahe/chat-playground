@@ -1,5 +1,5 @@
 import {
-  ChatMessageBlock,
+  ChatMessageFormatter,
   ChatMessageTextBlock,
 } from '../message-blocks.interfaces';
 import Autolinker from 'autolinker';
@@ -7,9 +7,7 @@ import { ChatMessageLinkBlock } from './link.interfaces';
 
 const autolinker = new Autolinker({ email: false, phone: false });
 
-export function formatLinksBlocks(
-  blocks: ChatMessageBlock[]
-): ChatMessageBlock[] {
+export const formatLinksBlocks: ChatMessageFormatter = (blocks) => {
   return blocks.flatMap((block) => {
     if (block.type !== 'text') {
       return block;
@@ -45,4 +43,4 @@ export function formatLinksBlocks(
 
     return newBlocks;
   });
-}
+};
