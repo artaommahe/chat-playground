@@ -126,11 +126,12 @@ export const messagesData: ChatMessage[] = [
   {
     id: 'a11',
     from: { name: 'test user 1' },
-    text: 'text with https://twitch.tv link',
+    text: 'text with https://twitch.tv link and Kappa',
     blocks: [
       { type: 'text', text: 'text with ' },
       { type: 'link', url: 'https://twitch.tv' },
-      { type: 'text', text: ' link' },
+      { type: 'text', text: ' link and ' },
+      { type: 'emote', id: '25', text: 'Kappa' },
     ],
     provider: 'twitch',
   },
