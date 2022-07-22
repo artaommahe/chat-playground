@@ -1,9 +1,18 @@
-import { ChatMessageBlock } from './message-blocks.interfaces';
-import { formatLinksBlocks } from './link-formatter';
+import { TwitchProviderMeta } from '../providers/twitch/twitch.interfaces';
+import {
+  ChatMessageBlock,
+  ChatMessageFormatter,
+} from './message-blocks.interfaces';
 
-const FORMATTERS = [formatLinksBlocks];
-
-export function formatMessageTextToBlocks(text: string): ChatMessageBlock[] {
+export function formatMessageTextToBlocks({
+  text,
+  formatters,
+  meta,
+}: {
+  text: string;
+  meta?: TwitchProviderMeta;
+  formatters: ChatMessageFormatter[];
+}): ChatMessageBlock[] {
   const initialBlocks: ChatMessageBlock[] = [
     {
       type: 'text',
@@ -11,8 +20,8 @@ export function formatMessageTextToBlocks(text: string): ChatMessageBlock[] {
     },
   ];
 
-  const blocks = FORMATTERS.reduce(
-    (blocks, parser) => parser(blocks),
+  const blocks = formatters.reduce(
+    (blocks, parser) => parser(blocks, meta),
     initialBlocks
   );
 

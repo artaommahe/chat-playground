@@ -10,5 +10,5 @@ const Template: ComponentStory<typeof Chat> = (args) => <Chat {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  channel: '',
+  channel: 'artaommahe',
 };

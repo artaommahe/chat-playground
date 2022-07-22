@@ -11,6 +11,7 @@ const StyledMessage = styled('div')(({ theme }) => ({
   padding: '5px',
   color: theme.palette.text.primary,
   fontSize: theme.typography.fontSize,
+  lineHeight: '22px',
 }));
 
 const StyledMessageFrom = styled('div')(({ theme, color }) => ({

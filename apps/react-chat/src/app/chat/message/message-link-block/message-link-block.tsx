@@ -1,9 +1,9 @@
 import { styled } from '@mui/material';
 import { memo, useEffect, useState } from 'react';
-import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
+import { TwitchMessageLinkBlock } from '../../core/providers/twitch/blocks/link/link.interfaces';
 
 export interface MessageProps {
-  block: ChatMessageLinkBlock;
+  block: TwitchMessageLinkBlock;
 }
 
 const StyledMessageLinkBlock = styled('a')(({ theme }) => ({

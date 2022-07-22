@@ -18,7 +18,7 @@ Primary.args = {
   message: {
     id: 'a1',
     from: { name: 'test user', color: '' },
-    text: 'test message with https://twitch.tv/ link',
+    text: 'test message with https://twitch.tv/ link and Kappa emote',
     blocks: [
       {
         type: 'text',
@@ -30,8 +30,18 @@ Primary.args = {
       },
       {
         type: 'text',
-        text: ' link ',
+        text: ' link and ',
+      },
+      {
+        type: 'emote',
+        id: '25',
+        text: 'Kappa',
+      },
+      {
+        type: 'text',
+        text: ' emote',
       },
     ],
+    provider: 'twitch',
   },
 };

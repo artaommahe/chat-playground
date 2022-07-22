@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
+import { TwitchMessageLinkBlock } from '../../core/providers/twitch/blocks/link/link.interfaces';
 import { StorybookChatThemeContainer } from '../../storybook/helpers';
 import { MessageLinkBlock } from './message-link-block';
 
 export default {
-  title: 'Message / Link block',
+  title: 'Message / Block / Link',
   component: MessageLinkBlock,
 } as ComponentMeta<typeof MessageLinkBlock>;
 
@@ -19,7 +19,7 @@ Primary.args = {
   block: {
     type: 'link',
     url: 'https://en.wikipedia.org/wiki/Thulium',
-  } as ChatMessageLinkBlock,
+  } as TwitchMessageLinkBlock,
 };
 
 export const LongLink = Template.bind({});
@@ -27,5 +27,5 @@ LongLink.args = {
   block: {
     type: 'link',
     url: 'https://en.wikipedia.org/wiki/Ioana_Marinescu',
-  } as ChatMessageLinkBlock,
+  } as TwitchMessageLinkBlock,
 };

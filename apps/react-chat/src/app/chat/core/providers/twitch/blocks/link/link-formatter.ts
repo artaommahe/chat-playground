@@ -1,15 +1,13 @@
-import {
-  ChatMessageBlock,
-  ChatMessageLinkBlock,
-  ChatMessageTextBlock,
-} from './message-blocks.interfaces';
 import Autolinker from 'autolinker';
+import {
+  ChatMessageFormatter,
+  ChatMessageTextBlock,
+} from '../../../../message-blocks/message-blocks.interfaces';
+import { TwitchMessageLinkBlock } from './link.interfaces';
 
 const autolinker = new Autolinker({ email: false, phone: false });
 
-export function formatLinksBlocks(
-  blocks: ChatMessageBlock[]
-): ChatMessageBlock[] {
+export const formatLinksBlocks: ChatMessageFormatter = (blocks) => {
   return blocks.flatMap((block) => {
     if (block.type !== 'text') {
       return block;
@@ -26,7 +24,7 @@ export function formatLinksBlocks(
       const textBeforeBlock: ChatMessageTextBlock | undefined = textBefore
         ? { type: 'text', text: textBefore }
         : undefined;
-      const linkBlock: ChatMessageLinkBlock = { type: 'link', url };
+      const linkBlock: TwitchMessageLinkBlock = { type: 'link', url };
 
       lastLinkEndIndex = linkIndex + text.length;
 
@@ -45,4 +43,4 @@ export function formatLinksBlocks(
 
     return newBlocks;
   });
-}
+};

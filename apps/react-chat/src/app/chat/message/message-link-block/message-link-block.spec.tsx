@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { ChatMessageLinkBlock } from '../../core/message-blocks/message-blocks.interfaces';
+import { TwitchMessageLinkBlock } from '../../core/providers/twitch/blocks/link/link.interfaces';
 import { MessageLinkBlock } from './message-link-block';
 
 describe('chat/message/blocks link', () => {
-  const block: ChatMessageLinkBlock = {
+  const block: TwitchMessageLinkBlock = {
     type: 'link',
     url: 'https://en.wikipedia.org/wiki/Thulium',
   };
@@ -28,7 +28,7 @@ describe('chat/message/blocks link', () => {
   });
 
   test('should render cutted text for long urls', () => {
-    const blockWithLongUrl: ChatMessageLinkBlock = {
+    const blockWithLongUrl: TwitchMessageLinkBlock = {
       type: 'link',
       url: 'https://en.wikipedia.org/wiki/Ioana_Marinescu',
     };
