@@ -1,5 +1,5 @@
-import { ChatMessageLinkBlock } from '../providers/twitch/blocks/link/link.interfaces';
-import { ChatMessageSmileBlock } from '../providers/twitch/blocks/smile/smile.interfaces';
+import { TwitchMessageLinkBlock } from '../providers/twitch/blocks/link/link.interfaces';
+import { TwitchMessageEmoteBlock } from '../providers/twitch/blocks/emote/emote.interfaces';
 import { TwitchProviderMeta } from '../providers/twitch/twitch.interfaces';
 
 export interface ChatMessageTextBlock {
@@ -9,8 +9,8 @@ export interface ChatMessageTextBlock {
 
 export type ChatMessageBlock =
   | ChatMessageTextBlock
-  | ChatMessageLinkBlock
-  | ChatMessageSmileBlock;
+  | TwitchMessageLinkBlock
+  | TwitchMessageEmoteBlock;
 
 export type ChatMessageFormatter = (
   blocks: ChatMessageBlock[],

@@ -2,10 +2,10 @@ import {
   ChatMessageFormatter,
   ChatMessageTextBlock,
 } from '../../../../message-blocks/message-blocks.interfaces';
-import { ChatMessageSmileBlock } from './smile.interfaces';
+import { TwitchMessageEmoteBlock } from './emote.interfaces';
 
 // NOTE: works only as first formatter due to twitch emotes text offset format
-export const formatSmileBlocks: ChatMessageFormatter = (blocks, meta) => {
+export const formatEmoteBlocks: ChatMessageFormatter = (blocks, meta) => {
   if (
     !meta?.tags.emotes ||
     !Object.values(meta?.tags.emotes).length ||
@@ -17,7 +17,7 @@ export const formatSmileBlocks: ChatMessageFormatter = (blocks, meta) => {
   const messageText = blocks[0].text;
   let lastEndOffset = 0;
 
-  // extract start/end offsets for each smile and sort in asc order by start offset
+  // extract start/end offsets for each emote and sort in asc order by start offset
   const emotes = Object.keys(meta?.tags.emotes)
     .flatMap((emoteId) => {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -42,10 +42,10 @@ export const formatSmileBlocks: ChatMessageFormatter = (blocks, meta) => {
           ]
         : []),
       {
-        type: 'smile',
-        emoteId,
-        emoteText: messageText.slice(start, end + 1),
-      } as ChatMessageSmileBlock,
+        type: 'emote',
+        id: emoteId,
+        text: messageText.slice(start, end + 1),
+      } as TwitchMessageEmoteBlock,
     ];
 
     lastEndOffset = end + 1;

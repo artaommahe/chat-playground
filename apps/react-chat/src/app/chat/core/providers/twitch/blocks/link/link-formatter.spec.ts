@@ -1,7 +1,7 @@
 import { ChatMessageBlock } from '../../../../message-blocks/message-blocks.interfaces';
 import { formatLinksBlocks } from './link-formatter';
 
-describe('chat/core/message-blocks link', () => {
+describe('chat/providers/twitch/blocks link', () => {
   const link1 = 'https://en.wikipedia.org/wiki/Thulium';
   const link2 = 'https://en.wikipedia.org/wiki/Ioana_Marinescu';
 

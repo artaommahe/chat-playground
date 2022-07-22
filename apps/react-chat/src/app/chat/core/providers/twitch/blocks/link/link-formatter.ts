@@ -3,7 +3,7 @@ import {
   ChatMessageFormatter,
   ChatMessageTextBlock,
 } from '../../../../message-blocks/message-blocks.interfaces';
-import { ChatMessageLinkBlock } from './link.interfaces';
+import { TwitchMessageLinkBlock } from './link.interfaces';
 
 const autolinker = new Autolinker({ email: false, phone: false });
 
@@ -24,7 +24,7 @@ export const formatLinksBlocks: ChatMessageFormatter = (blocks) => {
       const textBeforeBlock: ChatMessageTextBlock | undefined = textBefore
         ? { type: 'text', text: textBefore }
         : undefined;
-      const linkBlock: ChatMessageLinkBlock = { type: 'link', url };
+      const linkBlock: TwitchMessageLinkBlock = { type: 'link', url };
 
       lastLinkEndIndex = linkIndex + text.length;
 

@@ -1,4 +1,4 @@
-export interface ChatMessageLinkBlock {
+export interface TwitchMessageLinkBlock {
   type: 'link';
   url: string;
 }
