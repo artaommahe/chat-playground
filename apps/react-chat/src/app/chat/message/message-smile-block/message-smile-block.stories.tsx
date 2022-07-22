@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ChatMessageSmileBlock } from '../../core/message-blocks/smile/smile.interfaces';
+import { ChatMessageSmileBlock } from '../../core/providers/twitch/blocks/smile/smile.interfaces';
 import { StorybookChatThemeContainer } from '../../storybook/helpers';
 import { MessageSmileBlock } from './message-smile-block';
 

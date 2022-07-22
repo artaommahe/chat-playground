@@ -1,6 +1,6 @@
+import { ChatMessageLinkBlock } from '../providers/twitch/blocks/link/link.interfaces';
+import { ChatMessageSmileBlock } from '../providers/twitch/blocks/smile/smile.interfaces';
 import { TwitchProviderMeta } from '../providers/twitch/twitch.interfaces';
-import { ChatMessageLinkBlock } from './link/link.interfaces';
-import { ChatMessageSmileBlock } from './smile/smile.interfaces';
 
 export interface ChatMessageTextBlock {
   type: 'text';

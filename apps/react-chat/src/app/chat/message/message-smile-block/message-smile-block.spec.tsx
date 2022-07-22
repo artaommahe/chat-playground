@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ChatMessageSmileBlock } from '../../core/message-blocks/smile/smile.interfaces';
+import { ChatMessageSmileBlock } from '../../core/providers/twitch/blocks/smile/smile.interfaces';
 import { MessageSmileBlock } from './message-smile-block';
 
 describe('chat/message/blocks smile', () => {

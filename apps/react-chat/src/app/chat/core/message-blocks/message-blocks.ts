@@ -1,5 +1,4 @@
 import { TwitchProviderMeta } from '../providers/twitch/twitch.interfaces';
-import { DEFAULT_FORMATTERS } from './message-blocks.consts';
 import {
   ChatMessageBlock,
   ChatMessageFormatter,
@@ -12,10 +11,8 @@ export function formatMessageTextToBlocks({
 }: {
   text: string;
   meta?: TwitchProviderMeta;
-  formatters?: ChatMessageFormatter[];
+  formatters: ChatMessageFormatter[];
 }): ChatMessageBlock[] {
-  formatters ??= DEFAULT_FORMATTERS;
-
   const initialBlocks: ChatMessageBlock[] = [
     {
       type: 'text',

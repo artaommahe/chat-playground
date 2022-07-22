@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ChatMessageLinkBlock } from '../../core/message-blocks/link/link.interfaces';
+import { ChatMessageLinkBlock } from '../../core/providers/twitch/blocks/link/link.interfaces';
 import { StorybookChatThemeContainer } from '../../storybook/helpers';
 import { MessageLinkBlock } from './message-link-block';
 

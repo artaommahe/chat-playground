@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
 import { memo } from 'react';
-import { ChatMessageSmileBlock } from '../../core/message-blocks/smile/smile.interfaces';
+import { ChatMessageSmileBlock } from '../../core/providers/twitch/blocks/smile/smile.interfaces';
 
 export interface MessageProps {
   block: ChatMessageSmileBlock;

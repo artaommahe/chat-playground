@@ -1,4 +1,4 @@
-import { ChatMessageBlock } from '../message-blocks.interfaces';
+import { ChatMessageBlock } from '../../../../message-blocks/message-blocks.interfaces';
 import { formatLinksBlocks } from './link-formatter';
 
 describe('chat/core/message-blocks link', () => {

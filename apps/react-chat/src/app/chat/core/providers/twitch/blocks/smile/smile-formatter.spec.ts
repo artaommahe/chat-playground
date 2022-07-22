@@ -1,5 +1,5 @@
-import { TwitchProviderMeta } from '../../providers/twitch/twitch.interfaces';
-import { ChatMessageBlock } from '../message-blocks.interfaces';
+import { ChatMessageBlock } from '../../../../message-blocks/message-blocks.interfaces';
+import { TwitchProviderMeta } from '../../twitch.interfaces';
 import { formatSmileBlocks } from './smile-formatter';
 
 describe('chat/core/message-blocks smile', () => {

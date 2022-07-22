@@ -1,7 +1,7 @@
 import {
   ChatMessageFormatter,
   ChatMessageTextBlock,
-} from '../message-blocks.interfaces';
+} from '../../../../message-blocks/message-blocks.interfaces';
 import { ChatMessageSmileBlock } from './smile.interfaces';
 
 // NOTE: works only as first formatter due to twitch emotes text offset format
