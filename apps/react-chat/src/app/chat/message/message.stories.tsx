@@ -33,5 +33,6 @@ Primary.args = {
         text: ' link ',
       },
     ],
+    provider: 'twitch',
   },
 };

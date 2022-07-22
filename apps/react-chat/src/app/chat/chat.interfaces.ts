@@ -12,5 +12,5 @@ export interface ChatMessage {
   text: string;
   blocks: ChatMessageBlock[];
   provider: typeof TWITCH_PROVIDER;
-  providerMeta: TwitchProviderMeta;
+  providerMeta?: TwitchProviderMeta;
 }

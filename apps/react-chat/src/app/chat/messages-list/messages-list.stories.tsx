@@ -11,90 +11,105 @@ export const messagesData: ChatMessage[] = [
     from: { name: 'test user 1' },
     text: 'test message',
     blocks: [{ type: 'text', text: 'test message' }],
+    provider: 'twitch',
   },
   {
     id: 'a2',
     from: { name: 'test user 2' },
     text: 'spam 1',
     blocks: [{ type: 'text', text: 'spam 1' }],
+    provider: 'twitch',
   },
   {
     id: 'a3',
     from: { name: 'test user 2' },
     text: 'spam 2',
     blocks: [{ type: 'text', text: 'spam 2' }],
+    provider: 'twitch',
   },
   {
     id: 'a4',
     from: { name: 'test user 2' },
     text: 'spam 3',
     blocks: [{ type: 'text', text: 'spam 3' }],
+    provider: 'twitch',
   },
   {
     id: 'a5',
     from: { name: 'test user 2' },
     text: 'spam 4',
     blocks: [{ type: 'text', text: 'spam 4' }],
+    provider: 'twitch',
   },
   {
     id: 'a6',
     from: { name: 'test user 2' },
     text: 'spam 5',
     blocks: [{ type: 'text', text: 'spam 5' }],
+    provider: 'twitch',
   },
   {
     id: 'a7',
     from: { name: 'test user 2' },
     text: 'spam 6',
     blocks: [{ type: 'text', text: 'spam 6' }],
+    provider: 'twitch',
   },
   {
     id: 'b1',
     from: { name: 'test user 1' },
     text: 'more spam 1',
     blocks: [{ type: 'text', text: 'more spam 1' }],
+    provider: 'twitch',
   },
   {
     id: 'b2',
     from: { name: 'test user 1' },
     text: 'more spam 2',
     blocks: [{ type: 'text', text: 'more spam 2' }],
+    provider: 'twitch',
   },
   {
     id: 'b3',
     from: { name: 'test user 1' },
     text: 'more spam 3',
     blocks: [{ type: 'text', text: 'more spam 3' }],
+    provider: 'twitch',
   },
   {
     id: 'b4',
     from: { name: 'test user 1' },
     text: 'more spam 4',
     blocks: [{ type: 'text', text: 'more spam 4' }],
+    provider: 'twitch',
   },
   {
     id: 'b5',
     from: { name: 'test user 1' },
     text: 'more spam 5',
     blocks: [{ type: 'text', text: 'more spam 5' }],
+    provider: 'twitch',
   },
   {
     id: 'b6',
     from: { name: 'test user 1' },
     text: 'more spam 6',
     blocks: [{ type: 'text', text: 'more spam 6' }],
+    provider: 'twitch',
   },
   {
     id: 'a8',
     from: { name: 'test user 2' },
     text: 'another test message',
     blocks: [{ type: 'text', text: 'another test message' }],
+    provider: 'twitch',
   },
   {
     id: 'a9',
     from: { name: 'test user 3' },
     text: 'other test message',
     blocks: [{ type: 'text', text: 'other test message' }],
+    provider: 'twitch',
   },
   {
     id: 'a10',
@@ -106,6 +121,7 @@ export const messagesData: ChatMessage[] = [
         text: 'some long long long long long long long long long long long long long (cat) message',
       },
     ],
+    provider: 'twitch',
   },
   {
     id: 'a11',
@@ -116,6 +132,7 @@ export const messagesData: ChatMessage[] = [
       { type: 'link', url: 'https://twitch.tv' },
       { type: 'text', text: ' link' },
     ],
+    provider: 'twitch',
   },
 ];
 
@@ -156,11 +173,12 @@ export const Autoscroll: ComponentStory<typeof MessagesList> = (props) => {
           from: { name: 'test user 1' },
           text: `message ${messages.length}`,
           blocks: [{ type: 'text', text: `message ${messages.length}` }],
+          provider: 'twitch',
         },
       ]);
     }, 1000);
 
-    () => clearInterval(newMessageInterval);
+    return () => clearInterval(newMessageInterval);
   }, []);
 
   return (
@@ -177,5 +195,6 @@ Autoscroll.args = {
     from: { name: 'test user 1' },
     text: `message ${index}`,
     blocks: [{ type: 'text', text: `message ${index}` }],
+    provider: 'twitch',
   })),
 };
