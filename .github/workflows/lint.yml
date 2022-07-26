@@ -1,0 +1,21 @@
+name: lint
+
+on: pull_request
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 2000
+      - run: git fetch origin main:main --depth=2000
+
+      - uses: ./.github/actions/node-common
+        with:
+          runner-os: ${{ runner.os }}
+
+      - name: Lint
+        run: yarn nx affected:lint --parallel

@@ -1,0 +1,26 @@
+name: Node common
+description: Common stuff  for nodejs like initing the right version and node_modules cache
+inputs:
+  runner-os:
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Use Node.JS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.13.0
+
+    # --- init node_modules cache
+    - name: Check cache
+      id: yarn-cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          node_modules
+        key: ${{ inputs.runner-os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      if: steps.yarn-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: yarn install --immutable --inline-builds
+    # ---

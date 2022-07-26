@@ -8,6 +8,7 @@ export interface MessageBlocksProps {
   blocks: ChatMessageBlock[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const BLOCKS_RENDERER: Record<ChatMessageBlock['type'], ComponentType<any>> = {
   text: MessageTextBlock,
   link: MessageLinkBlock,

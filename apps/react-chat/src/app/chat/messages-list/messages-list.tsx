@@ -31,11 +31,13 @@ export const MessagesList = memo(({ messages }: MessagesProps) => {
       !previousMessages.current ||
       scrollTop + clientHeight > scrollHeight - SCROLL_TRESHOLD_PX
     ) {
+      // eslint-disable-next-line functional/immutable-data
       messagesListRef.current.scrollTop = scrollHeight;
     }
   }, [messages]);
 
   useEffect(() => {
+    // eslint-disable-next-line functional/immutable-data
     previousMessages.current = messages;
   }, [messages]);
 
