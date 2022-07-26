@@ -15,10 +15,7 @@ const BLOCKS_RENDERER: Record<ChatMessageBlock['type'], ComponentType<any>> = {
   emote: MessageEmoteBlock,
 };
 
-export const MessageBlocks = memo(
-
-
-  ({ blocks }: MessageBlocksProps) => {
+export const MessageBlocks = memo(({ blocks }: MessageBlocksProps) => {
   return (
     <>
       {blocks.map((block, index) => {
