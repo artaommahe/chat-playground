@@ -35,6 +35,7 @@
             "ignorePattern": ["module.exports", "^.*?\\.args"]
           }
         ],
+        "@typescript-eslint/no-explicit-any": "error",
         "unicorn/filename-case": "error"
       }
     },
