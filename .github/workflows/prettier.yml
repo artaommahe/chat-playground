@@ -1,0 +1,31 @@
+name: Prettier
+
+on: pull_request
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 2000
+      - run: git fetch origin main:main --depth=2000
+
+      - uses: ./.github/actions/node-common
+        with:
+          runner-os: ${{ runner.os }}
+
+      - name: Prettify
+        run: yarn nx format:write
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "[AUTO] Prettified code" -a || true
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}

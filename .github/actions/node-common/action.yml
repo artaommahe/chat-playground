@@ -1,5 +1,5 @@
-name: Common
-description: Common stuff like initing right version of Node.JS and node_modules cache
+name: Node common
+description: Common stuff  for nodejs like initing the right version and node_modules cache
 inputs:
   runner-os:
     required: true
