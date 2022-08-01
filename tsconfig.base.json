@@ -17,7 +17,9 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@chat-playground/chat/core": ["libs/chat/core/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
