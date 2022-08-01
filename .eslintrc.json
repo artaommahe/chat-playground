@@ -32,7 +32,7 @@
         "functional/immutable-data": [
           "error",
           {
-            "ignorePattern": ["module.exports", "^.*?\\.args"]
+            "ignorePattern": ["module.exports", "^.*?\\.args", "this.*"]
           }
         ],
         "@typescript-eslint/no-explicit-any": "error",
